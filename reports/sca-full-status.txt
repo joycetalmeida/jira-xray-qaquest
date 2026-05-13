@@ -1,0 +1,2 @@
+﻿backend_full_exit_code=0
+frontend_full_exit_code=0

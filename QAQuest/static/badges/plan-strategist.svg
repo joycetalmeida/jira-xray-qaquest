@@ -1,0 +1,24 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-strategist" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F39C12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D68910;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="url(#grad-strategist)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+  <!-- Strategic grid icon -->
+  <g transform="translate(60, 60)">
+    <rect x="-20" y="-20" width="40" height="40" fill="none" stroke="white" stroke-width="2.5" rx="2"/>
+    <!-- Grid lines -->
+    <line x1="-20" y1="-7" x2="20" y2="-7" stroke="white" stroke-width="1.5"/>
+    <line x1="-20" y1="6" x2="20" y2="6" stroke="white" stroke-width="1.5"/>
+    <line x1="-7" y1="-20" x2="-7" y2="20" stroke="white" stroke-width="1.5"/>
+    <line x1="6" y1="-20" x2="6" y2="20" stroke="white" stroke-width="1.5"/>
+    <!-- Strategic points -->
+    <circle cx="-10" cy="-10" r="2.5" fill="white"/>
+    <circle cx="10" cy="10" r="2.5" fill="white"/>
+    <circle cx="-10" cy="10" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="10" cy="-10" r="1.5" fill="white" opacity="0.6"/>
+  </g>
+</svg>

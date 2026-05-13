@@ -1,0 +1,21 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-sprint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F1C40F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D68910;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="url(#grad-sprint)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+  <!-- Finish line flag icon -->
+  <g transform="translate(60, 60)">
+    <!-- Pole -->
+    <line x1="0" y1="-20" x2="0" y2="18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Flag upper section -->
+    <path d="M 2,-12 L 14,-6 L 2,0 Z" fill="white"/>
+    <!-- Flag lower section -->
+    <path d="M 2,0 L 14,6 L 2,12 Z" fill="white" opacity="0.7"/>
+    <!-- Flag stripe detail -->
+    <line x1="4" y1="-8" x2="12" y2="-4" stroke="#D68910" stroke-width="1" opacity="0.6"/>
+  </g>
+</svg>

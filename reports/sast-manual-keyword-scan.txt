@@ -1,0 +1,51 @@
+﻿Manual SAST keyword scan report
+Generated: 2026-05-08T17:29:20
+
+=== Pattern: eval\s*\( ===
+(no matches)
+
+=== Pattern: new\s+Function\s*\( ===
+(no matches)
+
+=== Pattern: child_process ===
+(no matches)
+
+=== Pattern: exec\s*\( ===
+(no matches)
+
+=== Pattern: spawn\s*\( ===
+(no matches)
+
+=== Pattern: fork\s*\( ===
+(no matches)
+
+=== Pattern: shell\s*:\s*true ===
+(no matches)
+
+=== Pattern: http:\/\/ ===
+(no matches)
+
+=== Pattern: process\.env ===
+(no matches)
+
+=== Pattern: atob\( ===
+(no matches)
+
+=== Pattern: btoa\( ===
+(no matches)
+
+=== Pattern: innerHTML\s*= ===
+(no matches)
+
+=== Pattern: dangerouslySetInnerHTML ===
+(no matches)
+
+=== Pattern: crypto\.createHash\( ===
+(no matches)
+
+=== Pattern: md5 ===
+(no matches)
+
+=== Pattern: sha1 ===
+(no matches)
+

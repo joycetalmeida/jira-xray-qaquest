@@ -1,0 +1,16 @@
+﻿SCA summary (npm audit full scope)
+generated=2026-05-08T17:37:41
+
+backend_total=156
+backend_vuln_total=0
+backend_low=0
+backend_moderate=0
+backend_high=0
+backend_critical=0
+
+frontend_total=226
+frontend_vuln_total=0
+frontend_low=0
+frontend_moderate=0
+frontend_high=0
+frontend_critical=0

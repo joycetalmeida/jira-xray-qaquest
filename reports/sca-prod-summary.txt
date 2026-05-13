@@ -1,0 +1,12 @@
+﻿SCA summary (npm audit --omit=dev)
+generated=2026-05-08T17:30:39
+
+backend_prod_total=60
+backend_vuln_total=0
+backend_high=0
+backend_critical=0
+
+frontend_prod_total=154
+frontend_vuln_total=0
+frontend_high=0
+frontend_critical=0

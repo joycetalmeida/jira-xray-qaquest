@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge definitions (symbol format for reuse) -->
+
+  <!-- 1. Test Architect Badge -->
+  <symbol id="badge-test-architect" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-architect" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-architect)" stroke="#2C5AA0" stroke-width="2"/>
+    <!-- Blueprint-style building -->
+    <g transform="translate(60, 60)">
+      <rect x="-25" y="-20" width="50" height="35" fill="none" stroke="white" stroke-width="2.5" rx="2"/>
+      <line x1="-15" y1="-20" x2="-15" y2="15" stroke="white" stroke-width="1.5"/>
+      <line x1="0" y1="-20" x2="0" y2="15" stroke="white" stroke-width="1.5"/>
+      <line x1="15" y1="-20" x2="15" y2="15" stroke="white" stroke-width="1.5"/>
+      <rect x="-22" y="-5" width="8" height="8" fill="white" rx="1"/>
+      <rect x="-6" y="-5" width="8" height="8" fill="white" rx="1"/>
+      <rect x="10" y="-5" width="8" height="8" fill="white" rx="1"/>
+      <rect x="-22" y="8" width="8" height="8" fill="white" rx="1"/>
+      <rect x="-6" y="8" width="8" height="8" fill="white" rx="1"/>
+      <rect x="10" y="8" width="8" height="8" fill="white" rx="1"/>
+    </g>
+  </symbol>
+
+  <!-- 2. Defect Hunter Badge -->
+  <symbol id="badge-defect-hunter" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-hunter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#E85D75;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#C42953;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-hunter)" stroke="#A01E3D" stroke-width="2"/>
+    <!-- Target/crosshair -->
+    <g transform="translate(60, 60)">
+      <circle cx="0" cy="0" r="20" fill="none" stroke="white" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="12" fill="none" stroke="white" stroke-width="2"/>
+      <circle cx="0" cy="0" r="4" fill="white"/>
+      <line x1="-28" y1="0" x2="-22" y2="0" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="22" y1="0" x2="28" y2="0" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="0" y1="-28" x2="0" y2="-22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="0" y1="22" x2="0" y2="28" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </symbol>
+
+  <!-- 3. Retest Master Badge -->
+  <symbol id="badge-retest-master" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-retest" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#9B59B6;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6C3A6F;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-retest)" stroke="#4A235A" stroke-width="2"/>
+    <!-- Circular arrows (retry icon) -->
+    <g transform="translate(60, 60)">
+      <path d="M 0,-18 Q 18,-18 18,0" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="18,0 24,-5 20,8" fill="white"/>
+      <path d="M 0,18 Q -18,18 -18,0" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="-18,0 -24,5 -20,-8" fill="white"/>
+    </g>
+  </symbol>
+
+  <!-- 4. Plan Strategist Badge -->
+  <symbol id="badge-plan-strategist" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-strategist" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#F39C12;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#D68910;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-strategist)" stroke="#A66309;stop-opacity:1" stroke-width="2"/>
+    <!-- Strategic grid/chess board -->
+    <g transform="translate(60, 60)">
+      <rect x="-20" y="-20" width="40" height="40" fill="none" stroke="white" stroke-width="2" rx="2"/>
+      <line x1="-20" y1="-6" x2="20" y2="-6" stroke="white" stroke-width="1.5"/>
+      <line x1="-20" y1="6" x2="20" y2="6" stroke="white" stroke-width="1.5"/>
+      <line x1="-6" y1="-20" x2="-6" y2="20" stroke="white" stroke-width="1.5"/>
+      <line x1="6" y1="-20" x2="6" y2="20" stroke="white" stroke-width="1.5"/>
+      <circle cx="-10" cy="-10" r="3" fill="white"/>
+      <circle cx="10" cy="10" r="3" fill="white"/>
+    </g>
+  </symbol>
+
+  <!-- 5. Elite Documenter Badge -->
+  <symbol id="badge-elite-documenter" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-documenter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#16A085;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#0E5C3C;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-documenter)" stroke="#084032;stop-opacity:1" stroke-width="2"/>
+    <!-- Document/pages -->
+    <g transform="translate(60, 60)">
+      <rect x="-16" y="-22" width="24" height="32" fill="white" stroke="none" rx="2"/>
+      <line x1="-12" y1="-16" x2="12" y2="-16" stroke="#16A085" stroke-width="1.5"/>
+      <line x1="-12" y1="-10" x2="12" y2="-10" stroke="#16A085" stroke-width="1.5"/>
+      <line x1="-12" y1="-4" x2="8" y2="-4" stroke="#16A085" stroke-width="1.5"/>
+      <line x1="-12" y1="2" x2="12" y2="2" stroke="#16A085" stroke-width="1.5"/>
+      <line x1="-12" y1="8" x2="10" y2="8" stroke="#16A085" stroke-width="1.5"/>
+      <path d="M 2,-20 L 12,-20 L 12,-10 Z" fill="#16A085"/>
+    </g>
+  </symbol>
+
+  <!-- 6. Gherkin Guardian Badge -->
+  <symbol id="badge-gherkin-guardian" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-gherkin" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#27AE60;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#1E8449;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-gherkin)" stroke="#145A32;stop-opacity:1" stroke-width="2"/>
+    <!-- Shield/Guard with checkmark -->
+    <g transform="translate(60, 60)">
+      <path d="M -15,-15 L 15,-15 L 15,0 Q 0,20 0,20 Q 0,20 -15,0 Z" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M -5,5 L 5,13 L 12,-2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </symbol>
+
+  <!-- 7. Evidence Curator Badge -->
+  <symbol id="badge-evidence-curator" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-evidence" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#2980B9;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#1B4965;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-evidence)" stroke="#0E2C42;stop-opacity:1" stroke-width="2"/>
+    <!-- Camera/photo evidence -->
+    <g transform="translate(60, 60)">
+      <rect x="-18" y="-14" width="36" height="28" fill="none" stroke="white" stroke-width="2.5" rx="2"/>
+      <circle cx="0" cy="2" r="10" fill="none" stroke="white" stroke-width="2"/>
+      <circle cx="0" cy="2" r="5" fill="white"/>
+      <circle cx="12" cy="-8" r="2.5" fill="white"/>
+    </g>
+  </symbol>
+
+  <!-- 8. Traceability Lord Badge -->
+  <symbol id="badge-traceability-lord" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-traceability" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#8E44AD;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#5B2C6F;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-traceability)" stroke="#3B1747;stop-opacity:1" stroke-width="2"/>
+    <!-- Connected nodes/links -->
+    <g transform="translate(60, 60)">
+      <circle cx="-10" cy="-10" r="4" fill="white"/>
+      <circle cx="10" cy="-10" r="4" fill="white"/>
+      <circle cx="0" cy="10" r="4" fill="white"/>
+      <line x1="-8" y1="-8" x2="8" y2="-8" stroke="white" stroke-width="2"/>
+      <line x1="-8" y1="-8" x2="0" y2="8" stroke="white" stroke-width="2"/>
+      <line x1="8" y1="-8" x2="0" y2="8" stroke="white" stroke-width="2"/>
+    </g>
+  </symbol>
+
+  <!-- 9. Coverage Guardian Badge -->
+  <symbol id="badge-coverage-guardian" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-coverage" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#E74C3C;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#A93226;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-coverage)" stroke="#78281F;stop-opacity:1" stroke-width="2"/>
+    <!-- Coverage gauge/pie chart -->
+    <g transform="translate(60, 60)">
+      <circle cx="0" cy="0" r="16" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+      <path d="M 0,-16 A 16,16 0 0,1 11.3,11.3 L 7.1,7.1 A 10,10 0 0,0 0,-10 Z" fill="white"/>
+      <circle cx="0" cy="0" r="6" fill="white"/>
+    </g>
+  </symbol>
+
+  <!-- 10. Sprint Finisher Badge -->
+  <symbol id="badge-sprint-finisher" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad-sprint" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#F1C40F;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#D68910;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#grad-sprint)" stroke="#A66309;stop-opacity:1" stroke-width="2"/>
+    <!-- Finish line/flag -->
+    <g transform="translate(60, 60)">
+      <line x1="0" y1="-18" x2="0" y2="18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 2,-12 L 14,-6 L 2,0 Z" fill="white"/>
+      <path d="M 2,0 L 14,6 L 2,12 Z" fill="white" opacity="0.7"/>
+    </g>
+  </symbol>
+
+  <!-- Display all badges -->
+  <text x="20" y="40" font-size="24" font-weight="bold" fill="#333">QAQuest Badge Assets</text>
+
+  <!-- Row 1 -->
+  <use href="#badge-test-architect" x="50" y="80" width="100" height="100"/>
+  <text x="50" y="200" font-size="12" text-anchor="middle" fill="#333">Test Architect</text>
+
+  <use href="#badge-defect-hunter" x="200" y="80" width="100" height="100"/>
+  <text x="200" y="200" font-size="12" text-anchor="middle" fill="#333">Defect Hunter</text>
+
+  <use href="#badge-retest-master" x="350" y="80" width="100" height="100"/>
+  <text x="350" y="200" font-size="12" text-anchor="middle" fill="#333">Retest Master</text>
+
+  <use href="#badge-plan-strategist" x="500" y="80" width="100" height="100"/>
+  <text x="500" y="200" font-size="12" text-anchor="middle" fill="#333">Plan Strategist</text>
+
+  <use href="#badge-elite-documenter" x="650" y="80" width="100" height="100"/>
+  <text x="650" y="200" font-size="12" text-anchor="middle" fill="#333">Elite Documenter</text>
+
+  <!-- Row 2 -->
+  <use href="#badge-gherkin-guardian" x="50" y="280" width="100" height="100"/>
+  <text x="50" y="400" font-size="12" text-anchor="middle" fill="#333">Gherkin Guardian</text>
+
+  <use href="#badge-evidence-curator" x="200" y="280" width="100" height="100"/>
+  <text x="200" y="400" font-size="12" text-anchor="middle" fill="#333">Evidence Curator</text>
+
+  <use href="#badge-traceability-lord" x="350" y="280" width="100" height="100"/>
+  <text x="350" y="400" font-size="12" text-anchor="middle" fill="#333">Traceability Lord</text>
+
+  <use href="#badge-coverage-guardian" x="500" y="280" width="100" height="100"/>
+  <text x="500" y="400" font-size="12" text-anchor="middle" fill="#333">Coverage Guardian</text>
+
+  <use href="#badge-sprint-finisher" x="650" y="280" width="100" height="100"/>
+  <text x="650" y="400" font-size="12" text-anchor="middle" fill="#333">Sprint Finisher</text>
+</svg>
