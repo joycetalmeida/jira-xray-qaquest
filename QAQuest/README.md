@@ -1,64 +1,78 @@
-# QAQuest Forge Plugin
+# QAQuest - Security Review Package
 
-QAQuest is an Atlassian Forge app for Jira/Xray that applies
-quality-focused gamification to software testing activities.
+## What is included
 
-## Technical Overview
+- `QAQuest/` (Forge app source code)
+  - `manifest.yml`
+  - `package.json` and `package-lock.json`
+  - `src/` (backend/resolvers/triggers/lifecycle)
+  - `static/hello-world/` (frontend source + build artifacts)
+  - `README.md`
+- `privacy_policy.md`
+- `terms_of_use.md`
 
-The plugin is implemented as a Forge app with:
+## What is intentionally excluded
 
-- Jira issue panel and project page modules for visualization
-- Trigger handlers for Jira issue creation/update events
-- Lifecycle handlers for app installation/uninstallation events
-- Real-time scoring logic based on Xray/Jira data
-- Badge progression, level calculation, and usage analytics
+- `node_modules/`
+- `.git/`
+- local logs
 
-Main technical components:
+These are excluded to reduce package size and avoid leaking local environment details.
 
-- `src/index.js`: main resolver and integration entrypoint
-- `src/webhooks.js`: event processing for Jira issue changes
-- `src/lifecycle.js`: app lifecycle event handling
-- `src/reward-events.js`: gamification event/reward processing
-- `src/game-report.js`: progress and score reporting
-- `src/usage-analytics.js`: usage telemetry and activity signals
-- `src/gamification-storage.js`: app storage abstractions
-- `static/hello-world/`: frontend UI (dashboard, badges, quality panels)
+## Setup steps
 
-## Prerequisites
+1. Install Node.js (20+) and Atlassian Forge CLI.
+2. Authenticate Forge CLI.
+3. Open `QAQuest/`.
+4. Run `npm install`.
+5. Open `QAQuest/static/hello-world/` and run:
+   - `npm install`
+   - `npm run build`
+6. Return to `QAQuest/` and run:
+   - `forge deploy`
+   - `forge install` (if needed for target Jira site)
 
-To run or validate QAQuest in Jira Cloud, you need:
+## Recommended security checks
 
-1. Atlassian Cloud account with access to a Jira Cloud site
-2. Permission to install Forge apps in that site (site admin recommended)
-3. Node.js 20+ and npm
-4. Atlassian Forge CLI installed and authenticated
+From `QAQuest/`:
+- `npm audit --production`
 
-Forge setup reference:
+From `QAQuest/static/hello-world/`:
+- `npm audit --production`
 
-- https://developer.atlassian.com/platform/forge/set-up-forge/
+Optional:
+- run SAST/static analysis (Semgrep, CodeQL, Sonar)
+- produce SBOM (CycloneDX/SPDX)
 
-## Local Development
+## Included security evidence
 
-From the repository root:
+- SCA (full scope, including dev dependencies):
+  - `reports/sca-backend-full-npm-audit.json`
+  - `reports/sca-frontend-full-npm-audit.json`
+  - `reports/sca-full-summary.txt`
+  - `reports/sca-full-status.txt`
+- SCA (production dependencies only):
+  - `reports/sca-backend-prod-npm-audit.json`
+  - `reports/sca-frontend-prod-npm-audit.json`
+  - `reports/sca-prod-summary.txt`
+  - `reports/sca-prod-status.txt`
+- SAST (keyword-based static scan):
+  - `reports/sast-manual-keyword-scan.txt`
 
-```bash
-cd QAQuest
-npm install
-cd static/hello-world
-npm install
-npm run build
-cd ../..
-forge deploy
-```
+Current package status:
+- Backend full-scope SCA: 0 vulnerabilities
+- Frontend full-scope SCA: 0 vulnerabilities
+- Backend production SCA: 0 vulnerabilities
+- Frontend production SCA: 0 vulnerabilities
 
-Optional local tunnel for iterative frontend/backend debugging:
+## Data and permission notes (quick reference)
 
-```bash
-forge tunnel
-```
-
-## Artifact Availability
-
-Anonymous repository link for artifact availability:
-
-- https://anonymous.4open.science/r/qaquest-plugin-4BF3/README.md
+- Forge scopes in `manifest.yml`:
+  - `read:jira-work`
+  - `storage:app`
+- Main event triggers:
+  - `jira:issue_created`
+  - `jira:issue_updated`
+  - `app:installed`
+  - `app:uninstalled`
+- App model: reads Jira/Xray data and computes gamification metrics.
