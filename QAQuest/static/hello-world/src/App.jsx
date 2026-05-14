@@ -152,13 +152,28 @@ export default function App() {
   if (!data) return <div className="box">⏳ Loading QAQuest...</div>;
 
   const sprintSeries = (data.sprintPerformance || []).slice(-8);
-  const maxSprintScore = Math.max(1, ...sprintSeries.map((s) => s.score || 0));
+
+  // Build cumulative series: each bar shows running total of points so far
+  const cumulativeSeries = sprintSeries.reduce((acc, s, i) => {
+    const prev = i === 0 ? 0 : acc[i - 1].cumulative;
+    acc.push({ ...s, cumulative: prev + (s.score || 0) });
+    return acc;
+  }, []);
+
+  const maxCumulative = Math.max(1, ...cumulativeSeries.map((s) => s.cumulative));
   const chartHeight = 200;
-  const chartBarWidth = 48;
-  const chartGap = 22;
-  const chartPaddingX = 24;
-  const chartPaddingY = 16;
-  const chartWidth = Math.max(360, chartPaddingX * 2 + sprintSeries.length * (chartBarWidth + chartGap));
+  const chartBarWidth = 42;
+  const chartGap = 20;
+  const chartPaddingX = 16;
+  const chartPaddingY = 24;
+  const chartWidth = chartPaddingX * 2 + cumulativeSeries.length * chartBarWidth + Math.max(0, cumulativeSeries.length - 1) * chartGap;
+
+  const compactSprintLabel = (name, index) => {
+    const raw = (name || `Sprint ${index + 1}`).trim();
+    const numericSuffix = raw.match(/(\d+)\s*$/);
+    if (numericSuffix) return `S${numericSuffix[1]}`;
+    return raw.length <= 6 ? raw : `${raw.slice(0, 5)}…`;
+  };
 
   return (
     <div className="wrap">
@@ -227,27 +242,41 @@ export default function App() {
         <div className="box">No sprint data available yet.</div>
       ) : (
         <div className="chart-wrap">
-          <svg width={chartWidth} height={chartHeight + 120} viewBox={`0 0 ${chartWidth} ${chartHeight + 120}`} className="sprint-chart" role="img" aria-label="Sprint performance based on points">
+          <svg
+            width={chartWidth}
+            height={chartHeight + 80}
+            viewBox={`0 0 ${chartWidth} ${chartHeight + 80}`}
+            preserveAspectRatio="xMinYMin meet"
+            className="sprint-chart"
+            role="img"
+            aria-label="Cumulative QA points per sprint"
+          >
             <defs>
               <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#22d3ee" />
                 <stop offset="100%" stopColor="#8b5cf6" />
               </linearGradient>
             </defs>
-            {sprintSeries.map((s, i) => {
+
+            {/* Bars */}
+            {cumulativeSeries.map((s, i) => {
               const x = chartPaddingX + i * (chartBarWidth + chartGap);
-              const h = Math.max(6, Math.round((s.score / maxSprintScore) * chartHeight));
+              const h = Math.max(8, Math.round((s.cumulative / maxCumulative) * chartHeight));
               const y = chartPaddingY + (chartHeight - h);
-              const shortName = (s.sprintName || `Sprint ${i + 1}`).replace(/^Sprint\s*/i, 'S');
+              const shortName = compactSprintLabel(s.sprintName, i);
+              const fullName = s.sprintName || `Sprint ${i + 1}`;
 
               return (
                 <g key={s.sprintId || `${s.sprintName}-${i}`}>
-                  <rect x={x} y={y} width={chartBarWidth} height={h} rx="10" className="bar-total" />
-                  <text x={x + chartBarWidth / 2} y={y - 8} textAnchor="middle" className="bar-value">{s.score}</text>
-                  <text x={x + chartBarWidth / 2} y={chartHeight + 55} textAnchor="middle" className="bar-label">{shortName}</text>
+                  <title>{`${fullName}: ${s.cumulative} pts acumulados (+${s.score} pts)`}</title>
+                  <rect x={x} y={y} width={chartBarWidth} height={h} rx="8" className="bar-total" />
+                  <text x={x + chartBarWidth / 2} y={y - 6} textAnchor="middle" className="bar-value">{s.cumulative}</text>
+                  <text x={x + chartBarWidth / 2} y={chartHeight + chartPaddingY + 28} textAnchor="middle" className="bar-label">{shortName}</text>
                 </g>
               );
             })}
+
+            
           </svg>
         </div>
       )}
